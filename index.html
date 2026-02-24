@@ -1,20 +1,182 @@
-<!doctype html>
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="pt-PT">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Culturiza-te — Volta ao Mundo</title>
-  <style>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:linear-gradient(135deg,#f8fafc,#e6f2ff);} 
-    .container{text-align:center;padding:2rem;border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.08);background:rgba(255,255,255,0.7);}
-    h1{font-size:2.25rem;margin:0 0 .5rem;color:#0f172a;}
-    p{margin:0;color:#334155;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vai na Volta | A Tua Viagem Cultural</title>
+    <style>
+        /* CSS Minimalista */
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #333333;
+            --accent-color: #e67e22;
+            --white: #ffffff;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        h1, h2, h3 { font-weight: 600; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; color: #555; }
+        
+        section {
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .hero {
+            text-align: center;
+            padding: 8rem 2rem;
+            background-color: var(--white);
+            border-bottom: 1px solid #eaeaea;
+        }
+        .hero h1 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 0; }
+        .hero .subtitle { font-size: 1.2rem; color: var(--accent-color); margin-bottom: 2rem; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #f0f0f0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #eaeaea;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .team-member h3 { font-size: 1.1rem; margin-bottom: 0.2rem; }
+        .team-member p { font-size: 0.9rem; margin-bottom: 0; }
+        .role { font-weight: bold; color: var(--accent-color); font-size: 0.85rem; }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: #111;
+            color: var(--white);
+        }
+        footer p { color: #888; font-size: 0.9rem; }
+        .logos { margin: 2rem 0; font-weight: bold; letter-spacing: 1px;}
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Culturiza-te na volta ao mundo</h1>
-    <p>Uma pequena celebração de culturas pelo globo.</p>
-  </div>
+
+    <section class="hero">
+        <h1>Vai na Volta</h1>
+        <p class="subtitle">Abertura de Portas às 15h00 | 16 de Maio</p>
+        <p><strong>Recinto da Feira de Carcavelos</strong></p>
+        <p>Das 15h00 às 19h00</p>
+    </section>
+
+    <section id="experiencia">
+        <h2>A Experiência</h2>
+        <p>A nossa promessa é simples: expandir horizontes num ambiente acessível e controlado, ensinando factos novos e competências práticas. O teu papel? Passar de mero espetador a protagonista ativo. Um convite para sair da zona de conforto e interagir com o desconhecido.</p>
+    </section>
+
+    <section id="destinos" style="background-color: var(--white);">
+        <h2>Os Nossos Destinos</h2>
+        <p>Explora as nossas estações através de blocos dinâmicos e interativos.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>🇵🇦 Panamá</h3>
+                <p><strong>No Palco:</strong> Atuação de Ritmos Latinos</p>
+                <p><strong>Na Estação:</strong> Workshop prático focado nos Padrões do Panamá e arte das Molas.</p>
+            </div>
+            <div class="card">
+                <h3>🇬🇼 Guiné-Bissau</h3>
+                <p><strong>No Palco:</strong> Exibição de Dança e Ritmos de Gumbe</p>
+                <p><strong>Na Estação:</strong> Workshop de "Pano de Pinte" (tecelagem tradicional).</p>
+            </div>
+            <div class="card">
+                <h3>🇪🇸 Espanha</h3>
+                <p><strong>No Palco:</strong> Exibição interativa de Flamenco/Sevilhanas</p>
+                <p><strong>Na Estação:</strong> Showcooking de Tapas Frias.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="infos">
+        <h2>Informações Úteis</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Acesso Livre</h3>
+                <p>Entrada gratuita. O evento assenta num modelo de financiamento que não depende de bilheteira.</p>
+            </div>
+            <div class="card">
+                <h3>No Recinto</h3>
+                <p>Tendas nas áreas de repouso, instalações sanitárias e Wi-Fi gratuito para partilhares a tua viagem.</p>
+            </div>
+            <div class="card">
+                <h3>O que trazer</h3>
+                <p>Roupa confortável, vontade de participar e o teu smartphone para interagires com os QR Codes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipa" style="background-color: var(--white);">
+        <h2>Sobre Nós</h2>
+        <p>A equipa por trás da coordenação geral do evento[cite: 3].</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Dawton Pessanha">
+                <h3>Dawton Pessanha</h3>
+                <p class="role">Produção técnica e sistemas | Gestão financeira [cite: 5, 6, 9, 10]</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Mariana Augusto">
+                <h3>Mariana Augusto</h3>
+                <p class="role">Programação, gestão cultural | RH [cite: 7, 18, 19]</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Sofia Barata">
+                <h3>Sofia Barata</h3>
+                <p class="role">Marketing, comunicação | Segurança e risco [cite: 8, 14, 15]</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Ana Rios">
+                <h3>Ana Rios</h3>
+                <p class="role">Operações | Avaliação e pós-evento [cite: 11, 12, 22, 23]</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Daniel Lucena">
+                <h3>Daniel Lucena</h3>
+                <p class="role">Logística, limpeza | Apoio geral [cite: 13, 20, 21]</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Sofia Pedroso">
+                <h3>Sofia Pedroso</h3>
+                <p class="role">Gestão de parcerias | Hospitalidade e fluxos [cite: 16, 17]</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logos">
+            ESHTE | CMC [cite: 25] | UFCP [cite: 25] | CASCAIS JOVEM [cite: 25]
+        </div>
+        <p>Contactos: evento@vainavolta.site | Instagram/TikTok: @vainavolta</p>
+        <p>&copy; 2026 Vai na Volta. Todos os direitos reservados. Projeto académico.</p>
+    </footer>
+
 </body>
 </html>
