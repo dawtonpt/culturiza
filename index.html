@@ -1,309 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vai na Volta | A Tua Viagem Cultural</title>
+    <title>DDD Soluções - Nossos Serviços</title>
     <style>
-        /* Nova Paleta de Cores Minimalista e Cultural */
-        :root {
-            --bg-color: #F9F8F6; /* Off-White / Bege muito claro (60%) */
-            --text-color: #2C2C2C; /* Cinza Carvão Escuro (30%) */
-            --accent-color: #C05A3A; /* Terracota / Laranja Terra (10%) */
-            --white: #FFFFFF;
-            --border-color: #E2DFD8;
-        }
-
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
             margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 { font-weight: 600; margin-bottom: 0.5rem; color: #1A1A1A; }
-        p { margin-bottom: 1rem; color: #4A4A4A; }
-
-        /* Container Principal */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Sistema de Navegação (Tabs) */
-        .tabs-nav {
+            padding: 20px;
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            border-bottom: 2px solid var(--border-color);
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .tab-button {
-            background: none;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--text-color);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            outline: none;
-        }
-
-        .tab-button:hover {
-            color: var(--accent-color);
-        }
-
-        .tab-button.active {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        .tab-button.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
+        .montage-wrapper {
+            max-width: 900px; 
             width: 100%;
-            height: 3px;
-            background-color: var(--accent-color);
         }
 
-        /* Conteúdo das Tabs */
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s ease;
+        /* Logo Section */
+        .montage-header {
+            background-color: transparent; 
+            text-align: center;
+            padding: 10px 0; /* Reduced padding */
+            margin-bottom: 20px;
         }
 
-        .tab-content.active {
+        .montage-header img {
+            /* CHANGED: Reduced from 400px to 180px */
+            max-width: 180px; 
+            width: 100%;
+            height: auto;
+            /* Optional: Removed shadow/border-radius for a cleaner logo feel */
+        }
+
+        /* Service Cards */
+        .service-item {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: auto;
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Estilos de Imagens Sugeridas */
-        .hero-image-placeholder {
-            width: 100%;
-            height: 400px;
-            background-color: #E0DCD3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            color: #7A7569;
-            font-weight: bold;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .image-placeholder-small {
-            width: 100%;
-            height: 200px;
-            background-color: #E0DCD3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border-radius: 8px;
-            margin-bottom: 1rem;
-            color: #7A7569;
-            font-size: 0.9rem;
-            text-align: center;
-            padding: 1rem;
         }
 
-        /* Grelhas */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border: 1px solid var(--border-color);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
+        .service-label {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #105ba1; 
             font-weight: bold;
-            margin-top: 1rem;
-            transition: background 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .cta-button:hover { background-color: #A04A2F; }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            background-color: var(--white);
-            border-top: 1px solid var(--border-color);
-            margin-top: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav class="tabs-nav">
-            <button class="tab-button active" onclick="openTab(event, 'tab-evento')">O Evento</button>
-            <button class="tab-button" onclick="openTab(event, 'tab-programa')">Destinos & Programa</button>
-            <button class="tab-button" onclick="openTab(event, 'tab-guia')">Guia Prático</button>
-            <button class="tab-button" onclick="openTab(event, 'tab-equipa')">A Equipa</button>
-        </nav>
+    <div class="montage-wrapper">
+        
+        <div class="montage-header">
+            <img src="1000680382.dddazul.jpg" alt="DDD Soluções Logo">
+        </div>
 
-        <main id="tab-evento" class="tab-content active">
-            <div class="hero-image-placeholder">
-                [Inserir Imagem: Pessoas a interagir, a rir ou a dançar num ambiente descontraído com ligeiro desfoque]
-            </div>
-            <h1 style="font-size: 3rem; text-align: center; color: var(--accent-color);">Vai na Volta</h1>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">A Tua Viagem Cultural Concentrada Num Só Espaço.</p>
-            
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <p><strong>📅 16 de Maio | 🕒 15h00 às 19h00</strong></p>
-                <p><strong>📍 Recinto da Feira de Carcavelos</strong></p>
-                <button class="cta-button" onclick="document.querySelector('.tab-button:nth-child(2)').click()">Descobre o Programa</button>
-            </div>
+        <div class="service-item">
+            <img src="Post DDD-3 (1).limpeza.png" alt="Limpeza">
+            <div class="service-label">Limpeza</div>
+        </div>
 
-            <div class="card">
-                <h2>A Experiência</h2>
-                <p>O nosso convite é para abandonares a zona de conforto e explorares novas culturas. Uma Viagem Volta ao Mundo sensorial e acessível, onde o teu papel é passar de mero espectador a protagonista ativo. Prepara-te para aprender e interagir!</p>
-            </div>
-        </main>
+        <div class="service-item">
+            <img src="Post DDD-2.sofa.png" alt="Estofos">
+            <div class="service-label">Estofos</div>
+        </div>
 
-        <main id="tab-programa" class="tab-content">
-            <h2 style="text-align: center;">Os Nossos Destinos</h2>
-            <p style="text-align: center;">Dinâmica em blocos de 30 minutos, alternando o foco entre o Palco Principal e as Estações.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <div class="image-placeholder-small">[Inserir Imagem: Detalhe aproximado de mãos a trabalhar num tecido colorido das Molas]</div>
-                    <h3 style="color: var(--accent-color);">🇵🇦 Panamá</h3>
-                    <p><strong>No Palco:</strong> Atuação de Ritmos Latinos.</p>
-                    <p><strong>Na Estação:</strong> Workshop prático focado nos Padrões do Panamá e arte das Molas.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="image-placeholder-small">[Inserir Imagem: Alguém a tocar um tambor tradicional ou detalhe de um Pano de Pinte]</div>
-                    <h3 style="color: var(--accent-color);">🇬🇼 Guiné-Bissau</h3>
-                    <p><strong>No Palco:</strong> Exibição de Dança e Ritmos de Gumbe.</p>
-                    <p><strong>Na Estação:</strong> Workshop de "Pano de Pinte" (tecelagem tradicional).</p>
-                </div>
-                
-                <div class="card">
-                    <div class="image-placeholder-small">[Inserir Imagem: Um prato de tapas empratado ou o movimento de uma saia de Sevilhanas]</div>
-                    <h3 style="color: var(--accent-color);">🇪🇸 Espanha</h3>
-                    <p><strong>No Palco:</strong> Exibição interativa de Flamenco ou Sevilhanas.</p>
-                    <p><strong>Na Estação:</strong> Showcooking de Tapas Frias.</p>
-                </div>
-            </div>
-        </main>
-
-        <main id="tab-guia" class="tab-content">
-            <h2 style="text-align: center;">Guia Prático</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Acesso Livre</h3>
-                    <p>Entrada gratuita. A nossa missão é proporcionar uma experiência acessível e sustentável para todos.</p>
-                </div>
-                <div class="card">
-                    <h3>Comodidades</h3>
-                    <p>O recinto conta com tendas nas áreas de repouso e workshops, sanitários e <strong>Wi-Fi gratuito</strong>.</p>
-                </div>
-                <div class="card">
-                    <h3>O Que Trazer</h3>
-                    <p>Roupa muito confortável para participares nas dinâmicas, boa energia e o teu <strong>smartphone</strong> para interagires com as nossas ativações via QR Code.</p>
-                </div>
-            </div>
-        </main>
-
-        <main id="tab-equipa" class="tab-content">
-            <h2 style="text-align: center;">A Coordenação Geral</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">A equipa académica que garante a articulação e sucesso desta viagem.</p>
-            
-            <div class="grid" style="text-align: center;">
-                <div>
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #E0DCD3; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: #7A7569; font-size: 0.8rem;">[Foto PB]</div>
-                    <h3 style="margin-bottom: 0;">Dawton Pessanha</h3>
-                    <p style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Produção Técnica & Finanças</p>
-                </div>
-                <div>
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #E0DCD3; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: #7A7569; font-size: 0.8rem;">[Foto PB]</div>
-                    <h3 style="margin-bottom: 0;">Mariana Augusto</h3>
-                    <p style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Programação & RH</p>
-                </div>
-                <div>
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #E0DCD3; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: #7A7569; font-size: 0.8rem;">[Foto PB]</div>
-                    <h3 style="margin-bottom: 0;">Sofia Barata</h3>
-                    <p style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Comunicação & Segurança</p>
-                </div>
-                <div>
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #E0DCD3; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: #7A7569; font-size: 0.8rem;">[Foto PB]</div>
-                    <h3 style="margin-bottom: 0;">Ana Rios</h3>
-                    <p style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Operações & Avaliação</p>
-                </div>
-                <div>
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #E0DCD3; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: #7A7569; font-size: 0.8rem;">[Foto PB]</div>
-                    <h3 style="margin-bottom: 0;">Daniel Lucena</h3>
-                    <p style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Logística & Manutenção</p>
-                </div>
-                <div>
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #E0DCD3; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: #7A7569; font-size: 0.8rem;">[Foto PB]</div>
-                    <h3 style="margin-bottom: 0;">Sofia Pedroso</h3>
-                    <p style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Parcerias & Hospitalidade</p>
-                </div>
-            </div>
-        </main>
     </div>
 
-    <footer>
-        <div style="margin-bottom: 1.5rem; font-weight: bold; color: var(--text-color);">
-            [Logo ESHTE] | [Logo CMC] | [Logo UFCP] | [Logo CASCAIS JOVEM]
-        </div>
-        <p style="font-size: 0.9rem; color: #777;">Contacto: ola@vainavolta.pt | Instagram: @vainavolta</p>
-        <p style="font-size: 0.8rem; color: #999; margin-top: 1rem;">&copy; 2026 Vai na Volta. Projeto académico desenvolvido na ESHTE.</p>
-    </footer>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            
-            document.getElementById(tabName).style.display = "block";
-            setTimeout(() => { document.getElementById(tabName).classList.add("active"); }, 10);
-            evt.currentTarget.className += " active";
-        }
-    </script>
 </body>
 </html>
